@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #C51BF9;
+    position: fixed;
+    width: calc(100% - 16px);
+    z-index: 99;
+
+}
+
+#header h1 {
+    color: whitesmoke;
+    font-family: "Lobster", sans-serif;
+    font-size: 3em;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+#nav ul {
+    display: flex;
+    gap: 50px;
+    font-family: "Lobster", sans-serif;
+    font-size: 1.5em;
+}
+
+#nav ul li {
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid whitesmoke;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#nav ul li:hover {
+    background-color: whitesmoke;
+}
+
+#nav ul li:hover a {
+    color: #110148;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#first {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px;
+    background-image: url(./Images/People/quentin-grignet-vwYrQQFoE-k-unsplash.jpg);
+}
+
+
+#first h2 {
+    font-size: 8em;
+    color: whitesmoke;
+    font-family: monospace;
+    margin-top: 80px;
+    text-align: center;
+}
+
+#activities {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:  wrap;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(57deg, #ff5722 40%, #e82cc2 30%);
+    width: 100%;
+}
+
+#activities h2{
+    color: whitesmoke;
+    font-family: sans-serif;
+    justify-content: center;
+    background-color: #C51BF9;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 6em;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+
+.friends, .party { 
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+    background-color: #f4f4a5;
+}
+
+.friends h3, .party h3 {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    background-color: #C51BF9;
+    font-family: sans-serif;
+    padding: 10px;
+    border: 1px solid #f4f4a5;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.friends img, .party img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #110148;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    #first h2 {
+        font-size: 5em;
+    }
+
+    #activities h2 {
+        font-size: 4em;
+    }
+
+    .friends, .party {
+        width: 80%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #header h1 {
+        font-size: 3em;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    #nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #first h2 {
+        font-size: 6em;
+        position:  relative;
+        top: 70px;
+        width: 100%;
+        right: -20px;
+
+    }
+
+    #activities h2 {
+        font-size: 2.5em;
+    }
+
+    .friends, .party {
+        width: 90%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    .friends img, .party img {
+        max-width: 100%;
+        flex-shrink: 1;
+    }
+}
+
+@media (max-width: 425px) {
+    #header {
+        padding: 5px;
+        flex-direction: column;
+    }
+
+    #header h1 {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    #first h2 {
+        font-size: 5em;
+        position: relative;
+        top:  60px;
+
+
+    }
+
+    #activities h2 {
+        font-size: 2em;
+        margin-left: 10px;
+    }
+
+    .friends, .party {
+        width: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 10px;
+    }
+
+    .friends img, .party img {
+        max-width: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        height: auto;
+    }
+}

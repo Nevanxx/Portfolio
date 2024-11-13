@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  #specimens-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .specimen-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 250px;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .specimen-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .specimen-card h2 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .specimen-card p {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+  
+  .dna-sequence {
+    font-family: monospace;
+    color: #0073e6;
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  

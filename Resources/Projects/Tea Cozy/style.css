@@ -1,0 +1,127 @@
+.body {
+    background-color: black;
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    opacity: 0.9;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#header {
+    height: 69px;
+    width: 100%;
+    border-bottom: 1px solid seashell;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    z-index: 1;
+    display: flex;
+}
+
+#image1 {
+    height: 50px;
+    padding: 10px 10px;
+}
+
+.nav {
+    text-align: right;
+    flex-grow: 1;
+    position: relative;
+    top: 30px;
+    right: 10px;
+}
+
+.nav a {
+    color: seashell;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+#mission {
+    background-image: url("Resources/Images/img-mission-background.jpg");
+    height: 700px;
+    width: 1200px;
+    padding-top: 70px;
+}
+
+#mission h2, h4 {
+    background-color: black;
+    padding: 10px;
+    position: relative;
+    top: 40%;
+    margin: 0;
+    display: block;
+}
+
+#teasection {
+    width: 1000px;
+    height: 700px;
+    margin: 0;
+    padding-top: 40px;
+    position: relative;
+    left: 4%;
+}
+
+.teacontainer {
+    margin: 15px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#teasection img {
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+}
+
+#teasection p {
+    background-color: black;
+    padding: 10px;
+    margin: 0;
+}
+
+.donutcontainer {
+    position: relative;
+    right: 150%;
+}
+
+.bizarretea {
+    position: relative;
+    right: 50%;
+    bottom: 33%;
+}
+
+#locations {
+    background-image: url("Resources/Images/img-locations-background.jpg");
+    height: 500px;
+    width: 1200px;
+}
+
+#locations h2 {
+    position: relative;
+    top: 20px;
+}
+
+.locationnames {
+    background-color: black;
+    display: inline-block;
+    opacity: 1;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+}
+
+#contact {
+    height: 200px;
+    position: relative;
+    right: 18%;
+}
+
+#footer {
+    text-align: left;
+    position: relative;
+    left: 20px;
+}

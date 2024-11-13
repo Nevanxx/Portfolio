@@ -1,0 +1,258 @@
+/* Base Styles for larger screens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Flexbox setup for body */
+body, html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Body styles */
+body {
+    background-color: #f5f6f7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0 10px;  /* Added padding for mobile responsiveness */
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin: 50px 0;
+}
+
+header h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* Main content area */
+#main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Quote container styles */
+#quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    max-width: 100%; /* Ensures container doesn't overflow on smaller screens */
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    flex: 1 1 auto;
+}
+
+/* Quote text */
+#quote {
+    font-size: 30px;
+    margin-bottom: 20px;
+    flex: 1 1 auto;
+    padding: 20px;
+}
+
+/* Author text */
+#author {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* Button container */
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    
+    border-radius: 5px;
+    padding: 10px;
+    width: 350px;
+    max-width: 100%; /* Ensures buttons container doesn't overflow */
+    background-color: white;
+    flex: 1 1 auto;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    display: flex;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Instructions section */
+#instructions {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 530px;
+    height: 150px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 30px;
+    margin: 130px auto;
+    position: relative;
+    bottom: 640px;
+    left: 50%;
+    transform: translateX(-50%);  /* Centers instructions */
+    border: 1px solid black;
+}
+
+#instructions h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#instructions ol {
+    list-style-type: decimal;
+}
+
+#instructions ol li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Mobile-first approach: for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+    header h1 {
+        font-size: 30px;  /* Reduce header size on small screens */
+    }
+    #quote-container {
+        width: 90%;  /* Make quote container 90% of screen width */
+        height: auto;  /* Allow height to adjust automatically */
+    }
+    #quote {
+        font-size: 20px;  /* Reduce font size for smaller screens */
+    }
+    #buttons {
+        width: 100%; /* Make the button container 100% of screen width */
+        margin: 20px 20px; /* Add some margin to buttons */
+        position: relative;
+        left: 10%;
+        transform: translateX(1%);
+    }
+    button {
+        flex: 1;  /* Buttons will take equal width */
+        font-size: 14px;
+        padding: 8px;
+    }
+    #instructions {
+        width: 90%;  /* Make instructions section 90% width */
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 20px auto;  /* Add margin for proper positioning on small screens */
+    }
+}
+
+/* Larger mobile devices, such as phablets, or small tablets */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px; /* Slightly larger padding on tablets */
+    }
+    header h1 {
+        font-size: 40px;  /* Adjust header size for tablets */
+    }
+    #quote-container {
+        width: 85%; /* Adjust width for larger mobile devices */
+        height: auto;
+    }
+    #quote {
+        font-size: 24px; /* Adjust font size for tablets */
+    }
+    #buttons {
+        width: 100%;  /* Buttons take up 100% width on tablets */
+        margin: 15px 0;  /* Adjust margin */
+    }
+    button {
+        flex: 1;
+        font-size: 15px;
+        padding: 10px;
+    }
+    #instructions {
+        width: 80%;  /* Instructions section is 80% of screen width */
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 20px auto;
+    }
+}
+
+/* Medium devices, like tablets in landscape mode */
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 45px;
+    }
+    #quote-container {
+        width: 75%;  /* Adjust container width for landscape mode tablets */
+    }
+    #quote {
+        font-size: 26px;  /* Larger font size for tablets */
+    }
+    #buttons {
+        width: 80%;  /* Buttons take 80% of screen width */
+    }
+    button {
+        flex: 1;
+        font-size: 16px;
+    }
+    #instructions {
+        width: 75%;  /* Instructions section is smaller for tablets */
+    }
+}
+
+/* Default layout for larger screens (desktops) */
+@media screen and (min-width: 1025px) {
+    body {
+        padding: 0; /* Remove extra padding for larger screens */
+    }
+    #quote-container {
+        width: 500px; /* Set fixed width for larger screens */
+        height: 500px; /* Keep fixed height */
+    }
+    #buttons {
+        width: 350px; /* Keep fixed width for buttons */
+    }
+}

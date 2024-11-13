@@ -1,0 +1,414 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+  background-color: #f4f4f9;
+  color: #121212;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #121212;
+  margin: 0;
+}
+
+/* Navigation Bar */
+nav {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 0;
+  gap: 20px;
+}
+
+.menu li {
+  font-size: 1.5em;
+  padding: 10px 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background-color: black;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Main Section */
+main {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* Introduction Section */
+#intro {
+  width: 100%;
+  padding: 100px 20px 20px;
+  text-align: center;
+}
+
+#intro h1 {
+  font-size: 4em;
+  color: #121212;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.5em;
+  color: #555555;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+/* Projects and Skills Section */
+.projects, .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.projects h2, .skills h2 {
+  font-size: 2.5em;
+  color: #121212;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.project-card, .skill-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.project-card:hover, .skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.project-name, .skill-name {
+  font-size: 1.7em;
+  color: #333333;
+  padding: 15px;
+}
+
+.project-image, .skill-image {
+  width: 100%;
+  height: 100%; /* Makes the image fill the container's height */
+  max-width: 300px;
+  max-height: 200px;
+  object-fit: cover; /* Ensures images are scaled to cover the area without distortion */
+  border-radius: 8px;
+}
+
+.project-description, .skill-description {
+  padding: 20px;
+  color: #666666;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Footer */
+#footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #121212;
+  border-top: 1px solid #ddd;
+}
+
+/* Socials */
+.socials {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socials li {
+  padding: 10px 20px;
+  color: #121212;
+  cursor: pointer;
+
+}
+
+.socials li:hover {
+  background-color: black;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Theme Switch Button */
+#theme-switch {
+  background-color: black;
+    color: #333;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Dark Mode Button */
+body.darkmode #theme-switch {
+  background-color: #e8eaf6;
+}
+
+/* Dark Mode Styling */
+body.darkmode {
+  background-color: #121212;
+  color: #e0e0e0; /* Changed color for better contrast */
+}
+
+body.darkmode header, 
+body.darkmode nav, 
+body.darkmode #footer,
+body.darkmode header nav .menu,
+body.darkmode header nav .menu li
+{
+  background-color: #000 !important;
+  color: #f1f1f1 !important;
+}
+
+
+
+body.darkmode .project-card, 
+body.darkmode .skill-card
+{
+  background-color: #222222; /* Darker background for project and skill cards */
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+
+body.darkmode .main {
+    background-color: rgb(7, 11, 29);
+    color: rgb(255, 255, 255);
+}
+
+body.darkmode .socials,
+body.darkmode .menu li, 
+body.darkmode .socials li {
+  background-color: black !important;
+  color: #f1f1f1;
+}
+
+body.darkmode .menu li:hover, 
+body.darkmode .socials li:hover {
+  background-color: white !important; /* Lighter hover color for contrast */
+  color: black !important; /* Darker text color for contrast */
+}
+
+/* Media Queries */
+
+/* 2K Screens (2560px and above) */
+@media (min-width: 2560px) {
+  .menu {
+    gap: 100px; /* Increased gap for better spacing */
+  }
+
+  .menu li {
+    font-size: 3em;
+  }
+
+  main {
+    padding: 150px 80px; 
+  }
+
+  #intro  {
+    font-size: 2em; 
+  }
+
+  p {
+    font-size: 2em; 
+  }
+
+  .projects h2, .skills h2 {
+    font-size: 3em; 
+  }
+
+  .projects, .skills {
+    gap: 40px;
+    width:  80%;
+
+  }
+  .project-card, .skill-card {
+    height:  600px; 
+    margin:  20px; 
+  }
+
+  .project-name, .skill-name {
+    font-size: 2em; 
+  }
+
+  .project-description, .skill-description {
+    font-size: 2em; 
+  }
+
+  #footer {
+    font-size: 1.8em; /* Larger footer font size */
+  }
+
+  /* Additional adjustments for better layout */
+  header h1 {
+    font-size: 3.5em; /* Larger header font size */
+  }
+
+  .socials li {
+    font-size: 1.8em; /* Larger social icons for better visibility */
+  }
+
+  #theme-switch {
+    height: 60px; /* Increased size of the theme switch */
+    width: 60px; /* Increased size of the theme switch */
+  }
+}
+
+
+/* Large screens (desktop) */
+@media (min-width: 1200px) {
+  .menu {
+      gap: 50px; 
+  }
+
+  main {
+      padding: 120px 60px; /* Increased padding for larger screens */
+  }
+
+  #intro h1 {
+      font-size: 4em; /* Larger intro font */
+  }
+
+  p {
+      font-size: 1.4em; /* Adjusted paragraph font size */
+  }
+
+  .project-card, .skill-card {
+      width: 300px; /* Larger card width */
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .menu {
+      flex-direction: row;
+      align-items: center;
+      gap: 30px; /* Adjusted gap for medium screens */
+  }
+
+  .project-card, .skill-card {
+      width: 45%; /* More flexible card width */
+      margin: 10px;
+  }
+
+  header h1 {
+      font-size: 2.5em; /* Adjusted header font size */
+  }
+
+  p {
+      font-size: 1.3em; /* Adjusted paragraph font size */
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 767px) {
+  header h1 {
+      font-size: 2em; /* Smaller header font size */
+  }
+
+  .menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px; /* Adjusted gap for small screens */;
+    }
+
+  .menu li {
+      font-size: 1.2em; /* Smaller menu items */
+      padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  #intro {
+      padding-top: 150px; /* Adjusted padding for smaller screens */
+  }
+
+  .project-card, .skill-card {
+      width: 100%; /* Full width for cards */
+      margin: 10px 0; /* Vertical margin */
+  }
+
+  .socials {
+      gap: 10px; /* Adjusted gap for smaller screens */
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+  }
+  .socials li {
+      font-size: 1.2em; /* Smaller social icons */
+  }
+
+  #theme-switch {
+      top: 80px; /* Adjusted position for smaller screens */
+      right: 10px; /* Adjusted position for smaller screens */
+  }
+}
+
+
+@media (max-width: 600px) {
+  #intro h1 {
+      font-size: 2.5em; /* Smaller intro font */
+  }
+
+  p {
+      font-size: 1.1em; /* Smaller paragraph font size */
+      padding: 5px; /* Adjusted padding for smaller screens */
+  }
+
+  #theme-switch {
+      height: 40px; /* Increased size of the theme switch */
+      width: 40px; /* Increased size of the theme switch */
+  }
+}
