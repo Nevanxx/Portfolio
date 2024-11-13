@@ -51,6 +51,12 @@ nav {
   padding: 10px 15px;
   color: #333;
   cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  position: relative;
 }
 
 .menu li:hover {
@@ -213,6 +219,7 @@ body.darkmode header nav .menu li
 {
   background-color: #000 !important;
   color: #f1f1f1 !important;
+  display: inline-block;
 }
 
 
@@ -235,6 +242,7 @@ body.darkmode .menu li,
 body.darkmode .socials li {
   background-color: black !important;
   color: #f1f1f1;
+  display: inline-block;
 }
 
 body.darkmode .menu li:hover, 
@@ -369,6 +377,11 @@ body.darkmode .socials li:hover {
   .menu li {
       font-size: 1.2em; /* Smaller menu items */
       padding: 10px; /* Adjusted padding for smaller screens */
+      display: inline-block;
+  }
+
+  .menu li.hide {
+    display: none;
   }
 
   #intro {

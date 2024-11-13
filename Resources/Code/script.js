@@ -167,3 +167,31 @@ githubButton.addEventListener('click', () => {
 emailButton.addEventListener('click', () => {
   window.open("mailto:shehrozrakhshani@gmail.com", '_blank');
 });
+
+// Hide the first 2 items when scrolling on mobile
+
+// Get navbar items by ID
+const item1 = document.getElementById('projectsOption');
+const item2 = document.getElementById('skillsOption');
+const item3 = document.getElementById('contactOption');
+
+// Function to check if the screen size is mobile
+function isMobile() {
+  return window.innerWidth <= 768; // Mobile screen width (adjustable)
+}
+
+// Set up scroll event listener
+window.addEventListener('scroll', function() {
+  if (isMobile()) { // Only trigger for mobile screens
+    if (window.scrollY > 70) {  // Adjust scroll value as needed
+      // Hide the first two items, keeping the bottom one visible
+      item1.classList.add('hide');
+      item2.classList.add('hide');
+    } else {
+      // Show the first two items again when scrolling back to top
+      item1.classList.remove('hide');
+      item2.classList.remove('hide');
+    }
+  }
+});
+
