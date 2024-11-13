@@ -4,7 +4,7 @@ deployment:
     - export DEPLOY_PATH=/home/shehngzw/public_html
     - echo "Deploying to ${DEPLOY_PATH}"
     
-    - export REPOSITORY_NAME=Portfolio1
+    - export REPOSITORY_NAME=Portfolio
     - echo "Cloning repository ${REPOSITORY_NAME}"
     
     - /bin/git clone https://github.com/Nevanxx/${REPOSITORY_NAME}.git ${DEPLOY_PATH} || (cd ${DEPLOY_PATH} && /bin/git pull)
