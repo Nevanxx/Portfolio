@@ -1,0 +1,179 @@
+/* Reset some default styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #89CFF0, #FFD6E8);
+    font-family: Arial, sans-serif;
+}
+
+/* main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 60%;
+}
+
+/* calculator */
+#calculator {
+    width: 60%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+/* calculator heading */
+#calculator h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 2em;
+}
+
+/* calculator buttons */
+#buttons {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 10px;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+/* calculator buttons */
+.number, .operator, #clear, #equal {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    color: #fff;
+    font-size: 1.7em;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* calculator hover */
+.number:hover, .operator:hover, #clear:hover, #equal:hover {
+    background: rgba(255, 255, 255, 0.3); 
+}
+
+/* calculator active */
+.number:active, .operator:active, #clear:active, #equal:active {
+    background: rgba(255, 255, 255, 0.5); 
+}
+
+/* calculator clear */
+#clear {
+    grid-column: span 2;
+}
+
+/* calculator equal */
+#equal {
+    grid-column: span 2;
+}
+
+/* calculator screen */
+#screen {
+    width: 90%;
+    grid-column: span 4;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    color: #fff;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    margin: 10px auto;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsiveness */
+
+/* 4k screens */
+@media only screen and (min-width: 2560px) {
+   main {
+    width: 50%;
+    height: 50%;
+   }
+    #calculator {
+        width: 100%;
+        height: 100%;
+    }
+
+    #screen {
+        font-size: 3em;
+    }
+
+    .number, .operator, #clear, #equal {
+        font-size: 4em;
+    }
+}
+
+
+/* 1440p screens */
+@media only screen and (max-width: 2559px) {
+   
+   main {
+    width: 60%;
+    height: 60%;
+   }
+    #calculator {
+        width: 70%;
+        height: 100%;
+    }
+
+    .number, .operator, #clear, #equal {
+        font-size: 2em;
+    }
+
+}
+
+/* Large screens */
+@media only screen and (max-width: 1024px) {
+    #calculator {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    
+    main {
+        width: 80%;
+        height: 60%;
+    }
+
+    #calculator {
+        width: 100%;
+        height: 100%;
+    }
+
+    .number, .operator, #clear, #equal {
+        font-size: 1em;
+    }
+}
+
+
+
